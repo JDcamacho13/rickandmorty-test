@@ -1,4 +1,4 @@
-import { Container, Text } from '@nextui-org/react'
+import { Container } from '@nextui-org/react'
 import Head from 'next/head'
 import { CharactersContainer } from '../components/CharactersContainer'
 import { PaginationControl } from '../components/PaginationControl'

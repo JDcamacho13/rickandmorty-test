@@ -1,5 +1,4 @@
 import { Card, Container, Row, Text } from "@nextui-org/react"
-import Link from "next/link"
 
 const locationsTypes = {
   'PlanetEarth': '🌎',

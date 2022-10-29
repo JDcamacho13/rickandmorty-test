@@ -91,6 +91,7 @@ export const Search = ({ width, initialValue = '', statusValue = 'all' }) => {
         />
         <Button color="success" auto type="submit">Search</Button>
       </Row>
+      <Spacer y={1} />
       <Select route={route} selected={characterStatus} setSelected={setCharacterStatus} />
       <Spacer  y={1.25}/>
     </form>
