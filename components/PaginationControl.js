@@ -1,7 +1,6 @@
 import { Pagination, Row, Spacer } from "@nextui-org/react"
 
 export const PaginationControl = ({ changePage, totalPages, size = "xs",initialPage }) => {
-  console.log(initialPage)
   return (
     <>
     <Spacer y={1} />

@@ -11,13 +11,21 @@ export const getCharacters = (url = '') => {
   })
 }
 
-export const searchCharacters = (name, page) => {
-  return fetch(BASE_URL + `/?name=${name}&page=${page}`).then(res => res.json()).then(res => {
-    const data = {
-      totalCount: res.info.count,
-      totalPages: res.info.pages,
-      characters: res.results
+export const searchCharacters = (name, page, status) => {
+  const filterStatus = status === undefined ? '' : `&status=${status}`
+  return fetch(BASE_URL + `/?name=${name}&page=${page}` + filterStatus).then(res => res.json()).then(res => {
+    if (res.error) {
+      return {
+        totalCount: 0,
+        totalPages: 0,
+        characters: []
+      }
+    } else {
+      return {
+        totalCount: res.info.count,
+        totalPages: res.info.pages,
+        characters: res.results
+      }
     }
-    return data
   })
 }
